@@ -1,0 +1,103 @@
+# Corner Grocer – Item Frequency Tracker
+
+## Project Overview
+The Corner Grocer program is a C++ console application designed to track and analyze item purchase frequencies from a text file.  
+It reads an input list of grocery items, counts how many times each item appears, and provides users with several options through an interactive menu:
+
+1. Search for a specific item and display its frequency  
+2. Display all items with their frequencies  
+3. Display a histogram using asterisks (*) to visualize purchase frequency  
+4. Exit the program  
+
+The program solves the problem of quickly identifying purchasing trends in grocery data by providing an easy, text-based way to summarize how often each item appears in the dataset.
+
+---
+
+## What I Did Particularly Well
+- Designed clean, modular functions for reading data, counting occurrences, and displaying output.  
+- Implemented input validation to ensure smooth user interaction and prevent crashes from invalid input.  
+- Added cross-platform build scripts (Makefile, build_and_run.bat, run.sh) to simplify compilation for both Windows and Linux/macOS users.  
+- Wrote detailed comments throughout the code, ensuring clear documentation and readability for future maintenance.  
+
+---
+
+## Areas for Enhancement
+- Introduce object-oriented programming (OOP) by creating a GroceryTracker class to encapsulate all counting, display, and file I/O operations.  
+  This would improve scalability and make the code easier to extend.  
+- Implement case-insensitive comparisons more robustly using std::transform to normalize user input.  
+- Allow the program to accept input and output file names as command-line arguments, making it more flexible for different datasets.  
+- Add error-handling and data validation for corrupted input files or unexpected formats.  
+- For efficiency, refactor to minimize copying of data and leverage references or iterators in loops.  
+
+---
+
+## Most Challenging Parts and How I Overcame Them
+One of the most challenging parts of the project was managing input parsing and data counting in a clean and efficient way.  
+I needed to ensure that duplicates were counted accurately and that case differences (e.g., “Apple” vs. “apple”) did not skew the results.  
+
+To solve this, I researched best practices in C++ string handling and used std::map for its sorted key functionality.  
+I also tested the logic using multiple input files to confirm accuracy.  
+
+Another challenge was debugging menu loops and validating user input.  
+Using the Codio debugger and detailed print statements helped trace program flow and quickly resolve logic issues.
+
+---
+
+## Transferable Skills
+- File I/O (input/output streams) and error handling in C++.  
+- Data structures such as std::map and std::vector for counting and organizing data.  
+- Cross-platform development through the creation of build scripts for different operating systems.  
+- Problem decomposition — breaking down a large task (data processing, counting, histogram generation) into smaller, testable functions.  
+- Version control with Git and GitHub for project management, documentation, and code backup.  
+
+These skills are widely applicable across future courses, personal projects, and professional software development environments.
+
+---
+
+## Maintainability, Readability, and Adaptability
+The program was developed with maintainability and readability in mind:
+- Functions are modular, each serving a single, well-defined purpose.  
+- Variable and function names are descriptive, reflecting their roles clearly.  
+- Comments and logical section breaks help other developers (or my future self) understand the workflow quickly.  
+- The use of constants, loops, and reusable code blocks makes the program adaptable to new data formats and features.  
+- The inclusion of build scripts and documentation ensures the program can be compiled and executed easily across multiple environments.  
+
+---
+
+## Repository Structure
+SNHU-BA/
+│
+├── CornerGrocer/
+│   ├── main.cpp
+│   ├── CS210_Project_Three_Input_File.txt
+│   ├── frequency.dat
+│   ├── Makefile
+│   ├── run.sh
+│   └── build_and_run.bat
+│
+└── README.md   ← (this file)
+
+---
+
+## How to Build and Run
+
+### Windows
+1. Open Command Prompt in the project folder.  
+2. Compile using:  
+   g++ -std=c++17 main.cpp -o CornerGrocer.exe
+3. Run:  
+   CornerGrocer.exe
+
+### macOS/Linux
+1. Open Terminal in the project folder.  
+2. Compile using:  
+   g++ -std=c++17 main.cpp -o CornerGrocer
+3. Run:  
+   ./CornerGrocer
+
+---
+
+## Reflection Summary
+This project demonstrates my ability to build structured, functional, and well-documented software in C++.  
+It showcases technical problem-solving, clean coding practices, and practical use of GitHub as a professional portfolio platform.  
+Completing this project strengthened both my programming confidence and my understanding of maintainable software design.
